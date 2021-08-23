@@ -337,3 +337,107 @@ header nav .form i {
     line-height: 2;
 }
 /* end services */
+/* start design section  */
+.design {
+    align-items: center;
+    overflow: hidden;
+    display: flex;
+    position: relative;
+    padding-top: var(--section-paddeng);
+    padding-bottom: var(--section-paddeng);
+    height: 600px;
+    background-image: url("/img/istockphoto-1220063918-170667a.jpg");
+    background-size: cover;
+}
+.design .img ,
+.design .text {
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+.design img {
+    position: relative;
+    width: 480px;
+    top: 112px
+}
+@media (max-width:895px) { 
+    .design .img {
+      display: none;
+    }
+}
+.design .text {
+    color: white;
+    background: var(--transparant-color);
+    padding: 70px;
+}
+.design .text h3 {
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+.design .text .point {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.design .text .point::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\f108";
+    font-weight: 800;
+    margin: 20px 30px 0 0;
+    font-size: 30px;
+}
+/* end design section  */
+/* start protfolio section */
+.portfolio {
+    padding-top: var(--section-paddeng);
+    padding-bottom: var(--section-paddeng);
+}
+.portfolio .shuffel {
+    display: flex;
+    justify-content: center;
+}
+.portfolio .shuffel li {
+    padding: 20px;
+}
+.portfolio .shuffel li.active {
+    background-color: var(--main-color);
+    color: white;
+}
+.portfolio .img-container {
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 50px;
+}
+.portfolio .img-container .box {
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.portfolio .img-container .box img {
+    max-width: 100%;
+    width: 1200px;
+    height: 708px;
+}
+@media (min-width:767px) { 
+    .portfolio .img-container .box {
+        flex-basis: 50%;
+    }
+    .portfolio .img-container .box img {
+        max-width: 100%;
+        width: 600px;
+        height: 354px;
+    }
+}
+@media (min-width:1199px) { 
+    .portfolio .img-container .box {
+        flex-basis: 25%;
+    }
+    .portfolio .img-container .box img {
+        max-width: 100%;
+        width: 300px;
+        height: 177px;
+    }
+}
+
+/* end protfolio section */
