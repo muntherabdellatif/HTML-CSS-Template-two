@@ -29,19 +29,19 @@ ul {
 }
 /* start media */
 /* small  */
-@media (min-width:768px) {
+@media screen and  (min-width:768px) {
     .container{
         width: 750px;
     }
 }
 /* medium */
-@media (min-width:992px) {
+@media screen and  (min-width:992px) {
     .container{
         width:970px ;
     }
 }
 /* large */
-@media (min-width:1200px){
+@media screen and  (min-width:1200px){
     .container{
         width:1170px ;
     }
@@ -168,13 +168,13 @@ header nav .form i {
     -o-transform: translateY(-50%);
 }
 /* all mwedia above 768px */
-@media (min-width:768px) {
+@media screen and  (min-width:768px) {
     header nav .toggle-menu {
        display: none;
     }
 }
 /* all mwedia below 768px */
-@media (max-width:767px) {
+@media screen and  (max-width:767px) {
     header nav ul {
        display: none;
     }
@@ -278,19 +278,19 @@ header nav .form i {
    background-color: var(--main-color);
    border-color: var(--main-color);
 }
-@media (max-width:767px) { 
+@media screen and  (max-width:767px) { 
     .landing {
         background-image: url(../img/0179695113362357.jpg);
 
     }
 }
-@media (max-width:767px) { 
+@media screen and  (max-width:767px) { 
     .landing .text {
         width: 100%;  
         justify-content: center;
     }
 }
-@media (max-width:767px) { 
+@media screen and  (max-width:767px) { 
     .change-background {
         font-size: 20px;
         margin: 0px 5px;
@@ -346,7 +346,7 @@ header nav .form i {
     padding-top: var(--section-paddeng);
     padding-bottom: var(--section-paddeng);
     height: 600px;
-    background-image: url("/img/istockphoto-1220063918-170667a.jpg");
+    background-image: url("../img/istockphoto-1220063918-170667a.jpg");
     background-size: cover;
 }
 .design .img ,
@@ -381,7 +381,7 @@ header nav .form i {
     margin: 20px 30px 0 0;
     font-size: 30px;
 }
-@media (max-width:895px) { 
+@media screen and  (max-width:895px) { 
     .design .img {
       display: none;
     }
@@ -419,7 +419,7 @@ header nav .form i {
     width: 1200px;
     height: 708px;
 }
-@media (min-width:767px) { 
+@media screen and  (min-width:767px) { 
     .portfolio .img-container .box {
         flex-basis: 50%;
     }
@@ -429,7 +429,7 @@ header nav .form i {
         height: 354px;
     }
 }
-@media (min-width:1199px) { 
+@media screen and  (min-width:1199px) { 
     .portfolio .img-container .box {
         flex-basis: 25%;
     }
