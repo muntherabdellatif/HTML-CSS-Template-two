@@ -88,6 +88,10 @@ ul {
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .main-heading  p {
     width: 500px;
@@ -135,6 +139,12 @@ header nav .toggle-menu {
     font-size: 25px;
     margin-top: 25px;
 }
+/* all mwedia above 768px */
+@media screen and  (min-width:991px) {
+    header nav .toggle-menu {
+       display: none;
+    }
+}
 header nav ul {
     display: flex;
 }
@@ -149,6 +159,24 @@ header nav ul li a {
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+}
+/* all mwedia below 768px */
+@media screen and  (max-width:990px) {
+    header nav ul {
+       display: none;
+    }
+    header nav .toggle-menu:hover + ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(71, 70, 70, 0.6);
+    }
+    header nav ul li a {
+        padding: 15px !important;
+    } 
 }
 header nav ul li a:hover,
 header nav ul li a.active {
@@ -174,30 +202,6 @@ header nav .form i {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
-}
-/* all mwedia above 768px */
-@media screen and  (min-width:991px) {
-    header nav .toggle-menu {
-       display: none;
-    }
-}
-/* all mwedia below 768px */
-@media screen and  (max-width:990px) {
-    header nav ul {
-       display: none;
-    }
-    header nav .toggle-menu:hover + ul {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: rgba(71, 70, 70, 0.6);
-    }
-    header nav ul li a {
-        padding: 15px !important;
-    } 
 }
 /* end header */
 /* start landing */
@@ -1050,3 +1054,49 @@ header nav .form i {
     color: var(--p-color);
 }
 /* end contact us  */
+/* start footer  */
+.footer {
+    padding-top: calc(var(--section-paddeng) / 2) ;
+    padding-bottom: calc(var(--section-paddeng) / 2) ;
+    background-image: url(../img/golden-leaf-black-background-luxury-wallpaper_53876-97654.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+    text-align: center;
+}
+.footer::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+}
+.footer .container {
+    position: relative;
+}
+.footer img {
+    width: 120px;
+}
+.footer p:not(.copyright) {
+    padding-bottom: 20px;
+    display: block;
+    width: fit-content;
+    margin: 0 auto 10px;
+    text-transform: uppercase;
+    border-bottom: 1px solid white;
+    /* border-width: 100px; */
+}
+.footer .social-icon i {
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.footer .copyright {
+    margin-top: 50px;
+}
+.footer .copyright span {
+    color: var(--main-color);
+    font-weight: bold;
+}
+/* end footer */
