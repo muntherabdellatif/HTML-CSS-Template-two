@@ -870,3 +870,32 @@ header nav .form i {
     color: white;
 }
 /* end pricing */
+/* start supscribe */
+.supscribe {
+    padding-top: var(--section-paddeng);
+    padding-bottom: var(--section-paddeng);
+    background-image: url(../img/3d-triangle-futuristic-blue-background-vector.jpg);
+    background-size: cover;
+    position: relative;
+    color: white;
+}
+.supscribe::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.212); 
+}
+.supscribe .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width:991px){
+    .supscribe .container {
+       flex-direction: column;
+    }
+}
+/* end supscribe */
