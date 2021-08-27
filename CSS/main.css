@@ -737,15 +737,136 @@ header nav .form i {
 /* end skill */
 /* start Quote Section  */
 .Quote {
-
+    padding-top: var(--section-paddeng);
+    padding-bottom: var(--section-paddeng);
+    position: relative;
+    background-image: url(../img/milky-way-2695569__480.jpg);
+    background-size:cover ;
+    color: white;
+    text-align: center;
+}
+.Quote::after { /* overlay  */
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.212); 
 }
 .Quote .container {
-
+    width: fit-content
 }
 .Quote .container q {
-
+    position: relative;
+    display: block;
+    width: fit-content;
+    font-size: 30px;
+    margin-bottom: 30px;
+} 
+.Quote .container q::before {
+    font-family: 'Font Awesome 5 Free';
+    content: "\f10d";
+    font-weight: bold;
+    font-size: 10px;
+    color: red;
+    position: absolute;
+    margin-right: 5px;
+}
+.Quote .container q::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f10e";
+    font-weight: bold;
+    font-size: 10px;
+    color: red;
+    position: absolute;
 }
 .Quote .container span {
-
+    margin-left: 20px;
 }
 /* end Quote Section */
+/* start pricing */
+.pricing {
+    padding-top: var(--section-paddeng);
+    padding-bottom: var(--section-paddeng);
+}
+.pricing .pricing-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 30px;
+}
+.pricing .pricing-container .item {
+    background-color: #fcfcfc;
+    text-align: center;
+}
+.pricing .pricing-container .item .head {
+    border-top: solid 2px var(--main-color);
+    border-bottom: solid 2px var(--main-color);
+    padding: 20px;
+}
+.pricing .pricing-container .item .head h3 {
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.pricing .pricing-container .item .head span {
+    font-size: 70px;
+    position: relative;
+    font-weight: 600;
+}
+.pricing .pricing-container .item .head span::after {
+    content: "/Mo" ;
+    font-size: 20px;
+    position: absolute;
+    bottom: 20px;
+}
+.pricing .pricing-container .item .head span::before {
+    content: "$";
+    font-size: 20px;
+    position: absolute;
+    top: 15px;
+    left: -14px;
+    font-weight: normal;
+}
+.pricing .pricing-container .item ul {
+    border-bottom: solid 2px var(--main-color);
+}
+.pricing .pricing-container .item li {
+    padding: 20px;
+    position: relative;
+}
+.pricing .pricing-container .item ul li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--main-color);
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pricing .pricing-container .item .foot a {
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    border: solid 2px var(--main-color);
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 15%;
+}
+.pricing .contact-us-text {
+    text-align: center;
+    margin: 50px auto 20px;
+    font-size: 20px;
+}
+.pricing .contact-link {
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    border: solid 2px var(--main-color);
+    width: fit-content;
+    margin: 20px auto;
+    background-color: var(--main-color);
+    color: white;
+}
+/* end pricing */
