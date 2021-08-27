@@ -67,7 +67,11 @@ ul {
     height: 1px;
     bottom: -30px;
     background-color: black;
-    position: absolute
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .main-heading  h2::after {
     content: "";
@@ -80,6 +84,10 @@ ul {
     border: 1px solid black;
     border-radius: 50%;
     bottom: -35px;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .main-heading  p {
     width: 500px;
@@ -168,13 +176,13 @@ header nav .form i {
     -o-transform: translateY(-50%);
 }
 /* all mwedia above 768px */
-@media screen and  (min-width:768px) {
+@media screen and  (min-width:991px) {
     header nav .toggle-menu {
        display: none;
     }
 }
 /* all mwedia below 768px */
-@media screen and  (max-width:767px) {
+@media screen and  (max-width:990px) {
     header nav ul {
        display: none;
     }
@@ -273,24 +281,28 @@ header nav .form i {
     border: solid 1px white;
     border-radius: 50%;
     margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .landing .bullets li.active {
    background-color: var(--main-color);
    border-color: var(--main-color);
 }
-@media screen and  (max-width:767px) { 
+@media screen and  (max-width:990px) { 
     .landing {
         background-image: url(../img/0179695113362357.jpg);
 
     }
 }
-@media screen and  (max-width:767px) { 
+@media screen and  (max-width:990px) { 
     .landing .text {
         width: 100%;  
         justify-content: center;
     }
 }
-@media screen and  (max-width:767px) { 
+@media screen and  (max-width:990px) { 
     .change-background {
         font-size: 20px;
         margin: 0px 5px;
@@ -381,7 +393,7 @@ header nav .form i {
     margin: 20px 30px 0 0;
     font-size: 30px;
 }
-@media screen and  (max-width:895px) { 
+@media screen and  (max-width:990px) { 
     .design .img {
       display: none;
     }
@@ -440,10 +452,10 @@ header nav .form i {
 }
 .portfolio .img-container .box:hover img {
     transform:  scale(1.1);
-    -webkit-transform: rotate(3deg) scale(1.1);
-    -moz-transform: rotate(3deg)  scale(1.1);
-    -ms-transform: rotate(3deg)  scale(1.1);
-    -o-transform: rotate(3deg)  scale(1.1);
+    -webkit-transform:  scale(1.1);
+    -moz-transform:  scale(1.1);
+    -ms-transform:  scale(1.1);
+    -o-transform:  scale(1.1);
 }
 .portfolio a {
     display: block;
@@ -682,6 +694,10 @@ header nav .form i {
     border: solid 1px var(--p-color);
     border-radius: 50%;
     margin: 5px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
 }
 .skills .container .testimonials .bullets li.active {
    background-color: var(--main-color);
@@ -844,6 +860,10 @@ header nav .form i {
     bottom: 0px;
     left: 50%;
     transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
 }
 .pricing .pricing-container .item .foot a {
     text-decoration: none;
@@ -853,6 +873,10 @@ header nav .form i {
     width: fit-content;
     margin: 20px auto;
     border-radius: 15%;
+    -webkit-border-radius: 15%;
+    -moz-border-radius: 15%;
+    -ms-border-radius: 15%;
+    -o-border-radius: 15%;
 }
 .pricing .contact-us-text {
     text-align: center;
@@ -891,11 +915,138 @@ header nav .form i {
 .supscribe .container {
     position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
 }
 @media (max-width:991px){
     .supscribe .container {
        flex-direction: column;
     }
 }
+.supscribe form {
+    display: flex;
+    position: relative;
+    width: 500px;
+    max-width: 100%;
+}
+.supscribe form i {
+    position:absolute;
+    top: 50%;
+    left: 25px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+.supscribe form input[type="email"] {
+    border: solid white 1px;
+    padding: 20px 20px 20px 60px ;
+    background: none;
+    caret-color: var(--main-color);
+    width: calc(100% - 130px);
+    border-right:none ;
+}
+.supscribe form input[type="submit"] {
+    border: solid white 1px;
+    width: 130px;  
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px 20px;
+    text-transform: uppercase; 
+    border-left: none;
+}
+.supscribe form ::placeholder {
+    color: white;
+}
+.supscribe form input[type="email"]:focus ,
+.supscribe form input[type="submit"]:focus {
+    outline: none;
+}
+.supscribe p {
+    margin-left: 50px;
+    line-height: 2;
+}
+@media (max-width:991px){
+    .supscribe p {
+    margin-left: 0px;
+    margin-top: 20px;
+    text-align: center;
+    }
+}
 /* end supscribe */
+/* start contact us  */
+.contact-us {
+    padding-top: var(--section-paddeng);
+    padding-bottom: var(--section-paddeng);
+}
+.contact-us .contact-us-contant {
+    display: flex;
+    flex-wrap: wrap;
+}
+.contact-us .contact-us-contant form {
+    width:calc(100% *2 / 3);
+}
+@media (max-width:991px){
+    .contact-us .contact-us-contant form {
+        width: 100% ;
+    }
+    .contact-us .contact-us-contant {
+        flex-direction: column;
+    }
+}
+.contact-us .contact-us-contant form input {
+    margin-bottom: 30px;
+}
+.contact-us .contact-us-contant form .massage {
+    height: 200px ;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.contact-us .contact-us-contant form .massage:focus {
+    outline: none;
+}
+.contact-us .contact-us-contant form input:not(:last-child) {
+    width: 100%;
+    height: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.contact-us .contact-us-contant form input:not(:last-child):focus {
+    outline: none;
+}
+.contact-us .contact-us-contant form input[type="submit"] {
+    display: flex;
+    margin-left: auto;
+    padding: 20px;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+    width: 185px;
+    text-align: center;
+    margin-top: 50px;
+    cursor: pointer;
+}
+.contact-us .contact-us-contant .text-section {
+    margin-left: 30px;
+}
+@media (max-width:991px){
+    .contact-us .contact-us-contant .text-section {
+        order: -1;
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+    }
+}
+.contact-us .contact-us-contant .text-section .text {
+    margin-bottom: 50px;
+}
+.contact-us .contact-us-contant .text-section .text h3 {
+    margin-bottom: 30px;
+}
+.contact-us .contact-us-contant .text-section .text p {
+    line-height: 2;
+    color: var(--p-color);
+}
+/* end contact us  */
